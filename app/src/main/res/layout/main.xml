@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1000000dp"
+    android:layout_height="1000000dp"
+    tools:context="com.example.oleg.Addnum.com.example.oleg.Addnum.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutGame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_green_dark"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textview"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutForLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutMenu"
+        android:layout_width="999984dp"
+        android:layout_height="999984dp"
+        android:background="@android:color/holo_green_dark"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/addnum2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/buttonNewGame"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="false"
+            android:onClick="buttonNewGame"
+            android:padding="10dp"
+            android:text="@string/new_game"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_bright"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="2dp" />
+
+        <EditText
+            android:id="@+id/editTextWorld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonRandomWorld"
+            android:layout_marginLeft="92dp"
+            android:layout_marginStart="92dp"
+            android:layout_toEndOf="@+id/buttonHelp"
+            android:layout_toRightOf="@+id/buttonHelp"
+            android:backgroundTint="@android:color/black"
+            android:backgroundTintMode="screen"
+            android:elevation="11dp"
+            android:ems="10"
+            android:filterTouchesWhenObscured="false"
+            android:inputType="number"
+            android:text="1"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textColorLink="@android:color/holo_blue_bright" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editTextWorld"
+            android:layout_alignLeft="@+id/editTextWorld"
+            android:layout_alignStart="@+id/editTextWorld"
+            android:text="@string/world"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonHelp"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonСontinue"
+            android:onClick="buttonHelp"
+            android:padding="10dp"
+            android:text="@string/help"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_blue_bright" />
+
+        <Button
+            android:id="@+id/buttonExit"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonHelp"
+            android:onClick="buttonExit"
+            android:padding="10dp"
+            android:text="@string/exit"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_blue_bright" />
+
+        <Button
+            android:id="@+id/buttonСontinue"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/buttonNewGame"
+            android:onClick="buttonContinue"
+            android:padding="10dp"
+            android:text="@string/ontinue"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_blue_bright" />
+
+        <TextView
+            android:id="@+id/textViewVer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/buttonNewGame"
+            android:layout_toRightOf="@+id/buttonNewGame"
+            android:text="@string/ver_1"
+            android:textColor="@android:color/holo_blue_bright" />
+
+        <Button
+            android:id="@+id/buttonRandomWorld"
+            style="@android:style/Widget.Holo.Light.Button.Inset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonHelp"
+            android:layout_alignBottom="@+id/buttonHelp"
+            android:layout_alignLeft="@+id/editTextWorld"
+            android:layout_alignStart="@+id/editTextWorld"
+            android:onClick="buttonRandomWorld"
+            android:text="Random"
+            android:textColor="@android:color/holo_blue_bright" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/substrate"
+            android:layout_below="@+id/buttonRandomWorld"
+            android:layout_toRightOf="@+id/buttonRandomWorld"
+            android:layout_toEndOf="@+id/buttonRandomWorld" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
